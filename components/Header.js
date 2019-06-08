@@ -6,7 +6,9 @@ const linkStyle = {
   marginRight: 15,
   textAlign: 'center',
   borderBottom: 'solid',
+  borderColor: 'black',
   textDecoration: 'none',
+  color: 'black',
   margin: 0
 
 };

@@ -2211,7 +2211,7 @@ function (_Document) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("html", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_7__["Head"], null, this.props.styleTags, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("link", {
-        href: "https://fonts.googleapis.com/css?family=Roboto&display=swap",
+        href: "https://fonts.googleapis.com/css?family=Roboto:100,400,700&display=swap",
         rel: "stylesheet"
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_7__["Main"], null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_7__["NextScript"], null)));
     }
