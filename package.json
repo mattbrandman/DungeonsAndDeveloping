@@ -3,18 +3,22 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "NODE_ENV=production node server.js",
+    "test": "next"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-styled-components": "^1.10.0",
+    "express": "^4.17.1",
     "next": "^8.1.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.1"
   }
 }
