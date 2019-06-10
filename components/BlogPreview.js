@@ -1,27 +1,31 @@
 import styled from 'styled-components'
-
-const BlogPreview = (props) => (
-    <div>
+import ReactMarkdown from 'react-markdown'
+const BlogPreview = ({ blogPostTitle, blogPostText }) => (
+    <StyledLi>
         <BlogTitle>
-            {props.blogTitle}
+            {blogPostTitle}
         </BlogTitle>
         <BlogPreviewText>
-            {props.blogPreviewText}
+            <ReactMarkdown source={blogPostText} />
         </BlogPreviewText>
         <BlogMetaText>
-            {props.MetaText}
+
         </BlogMetaText>
-    </div>
+    </StyledLi>
 );
 export default BlogPreview
 
-
+const StyledLi = styled.li`
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+`;
 const BlogTitle = styled.p`
     font-weight: 700;
 `;
-const BlogPreviewText = styled.p`
-    line-height: 1.2px;
+const BlogPreviewText = styled.div`
+    line-height: 1.5;
 `;
 const BlogMetaText = styled.p`
-    font-weight: 100;
+ 
 `;
