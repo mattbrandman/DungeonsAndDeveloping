@@ -158,7 +158,7 @@ var BlogPreview = function BlogPreview(_ref) {
 var StyledLi = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.li.withConfig({
   displayName: "BlogPreview__StyledLi",
   componentId: "sc-6q71c8-0"
-})(["border-bottom:solid;border-width:1px;border-color:lightgrey;"]);
+})(["border-bottom:solid;transition:0.3s ease-in-out;border-width:1px;border-color:lightgrey;&:hover{opacity:0.5;cursor:pointer;}"]);
 var BlogTitle = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.p.withConfig({
   displayName: "BlogPreview__BlogTitle",
   componentId: "sc-6q71c8-1"
@@ -205,7 +205,7 @@ var Header = function Header() {
     href: "/"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     style: linkStyle
-  }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, "Blog")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/projects"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     style: linkStyle
@@ -229,6 +229,42 @@ var Logo = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.h2.withConfi
   displayName: "Header__Logo",
   componentId: "sc-58adox-1"
 })(["text-align:center;"]);
+
+/***/ }),
+
+/***/ "./components/MyLayout.js":
+/*!********************************!*\
+  !*** ./components/MyLayout.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Layout; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+function Layout(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Container, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(HeaderContent, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_1__["default"], null)), props.children);
+}
+var Container = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "MyLayout__Container",
+  componentId: "sc-9r2lof-0"
+})(["display:grid;grid-template-columns:10% 15% auto 15% 10%;grid-template-rows:100px;font-family:'Roboto',sans-serif;color:#333;"]);
+var HeaderContent = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.div.withConfig({
+  displayName: "MyLayout__HeaderContent",
+  componentId: "sc-9r2lof-1"
+})(["display:grid;grid-column-start:1;grid-column-end:-1;border:1px;box-shadow:0px 3px 3px 1px #ccc;position:sticky;"]);
+var BlogContent = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.ul.withConfig({
+  displayName: "MyLayout__BlogContent",
+  componentId: "sc-9r2lof-2"
+})(["grid-row-start:3;grid-column-start:3;grid-column-end:4;margin-top:;list-style:none;"]);
 
 /***/ }),
 
@@ -922,7 +958,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Header */ "./components/Header.js");
+/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components_BlogPreview__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/BlogPreview */ "./components/BlogPreview.js");
@@ -938,7 +974,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function Index(props) {
-  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(Container, null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(HeaderContent, null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_components_Header__WEBPACK_IMPORTED_MODULE_5__["default"], null)), react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(BlogContent, null, props.BlogPostArray.map(function (blogPost, index) {
+  return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_5__["default"], null, react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(BlogContent, null, props.BlogPostArray.map(function (blogPost, index) {
     return react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_components_BlogPreview__WEBPACK_IMPORTED_MODULE_7__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_3__["default"])({
       key: index
     }, blogPost.fields));
@@ -994,7 +1030,7 @@ var HeaderContent = styled_components__WEBPACK_IMPORTED_MODULE_6___default.a.div
 var BlogContent = styled_components__WEBPACK_IMPORTED_MODULE_6___default.a.ul.withConfig({
   displayName: "pages__BlogContent",
   componentId: "sc-5unqvp-2"
-})(["grid-row-start:2;grid-column-start:3;grid-column-end:4;margin-top:;list-style:none;"]);
+})(["grid-row-start:3;grid-column-start:3;grid-column-end:4;margin-top:;list-style:none;"]);
 
 var contentful = __webpack_require__(/*! contentful */ "contentful");
 

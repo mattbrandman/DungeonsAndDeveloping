@@ -1,7 +1,8 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 // Import styled components ServerStyleSheet
+import styled from 'styled-components';
 import { ServerStyleSheet } from 'styled-components';
-
+import Header from '../components/Header'
 export default class MyDocument extends Document {
   static getInitialProps({ renderPage }) {
     // Step 1: Create an instance of ServerStyleSheet
@@ -21,7 +22,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html style={{backgroundColor: '#FFFAFB'}}>
         <Head>
           {/* Step 5: Output the styles in the head  */}
           {this.props.styleTags}
@@ -30,10 +31,11 @@ export default class MyDocument extends Document {
 
         </Head>
         <body>
-          <Main />
-          <NextScript />
+            <Main/>
+            <NextScript />
         </body>
       </html>
     );
   }
 }
+

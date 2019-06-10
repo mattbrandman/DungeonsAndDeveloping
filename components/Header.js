@@ -15,7 +15,7 @@ const Header = () => (
     <Logo>Dungeons and Development</Logo>
     <LinkContainer>
       <Link href="/">
-        <a style={linkStyle}>Home</a>
+        <a style={linkStyle}>Blog</a>
       </Link>
       <Link href="/projects">
         <a style={linkStyle}>Projects</a>

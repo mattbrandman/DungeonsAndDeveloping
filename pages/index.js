@@ -1,19 +1,16 @@
-import Header from '../components/Header';
+import Layout from '../components/MyLayout'
 import styled from 'styled-components';
 import BlogPreview from '../components/BlogPreview'
 import { createClient } from '../common/contentful';
 export default function Index(props) {
   return (
-    <Container>
-      <HeaderContent>
-          <Header />
-      </HeaderContent>
+    <Layout>
       <BlogContent>
         {props.BlogPostArray.map((blogPost, index) => {
           return <BlogPreview key={index} {...blogPost.fields}></BlogPreview>
         })}
       </BlogContent>
-    </Container>
+    </Layout>
   );                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 }
 
@@ -42,7 +39,7 @@ const HeaderContent = styled.div`
 `;
 
 const BlogContent = styled.ul`
-  grid-row-start: 2;
+  grid-row-start: 3;
   grid-column-start: 3;
   grid-column-end: 4;
   margin-top: ;
